@@ -32,3 +32,15 @@ let taxSwitch = document.getElementById("mainSwitch");
      
     }
   })
+
+
+
+  let mainSwitch = document.querySelector("#mainSwitch");
+   mainSwitch.addEventListener("change",function(){
+    let taxInfo = document.querySelectorAll(".Tax-Info");
+  
+    taxInfo.forEach(function(tax){
+      tax.style.display = mainSwitch.checked ?
+      "inline": "none";
+    });
+    });
